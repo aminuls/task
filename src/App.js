@@ -21,7 +21,7 @@ function App() {
                path: "/profile/:id",
                element: <Profile></Profile>,
                loader: async ({ params }) => {
-                  return fetch(`http://localhost:5000/profile/${params.id}`);
+                  return fetch(`https://task-server-pearl.vercel.app/profile/${params.id}`);
                },
             },
          ],

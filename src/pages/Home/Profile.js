@@ -28,7 +28,7 @@ const Profile = () => {
          sectors: data.select,
          terms_accept: data.term,
       };
-      fetch(`http://localhost:5000/user/update/${user._id}`, {
+      fetch(`https://task-server-pearl.vercel.app/user/update/${user._id}`, {
          method: "PATCH",
          headers: {
             "content-type": "application/json",

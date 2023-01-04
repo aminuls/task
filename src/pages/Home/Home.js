@@ -23,7 +23,7 @@ const Home = () => {
          sectors: data.select,
          terms_accept: data.term,
       };
-      fetch("http://localhost:5000/user", {
+      fetch("https://task-server-pearl.vercel.app/user", {
          method: "POST",
          headers: {
             "content-type": "application/json",

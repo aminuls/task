@@ -1,12 +1,12 @@
-import { useQuery } from '@tanstack/react-query';
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { useQuery } from "@tanstack/react-query";
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
-const Form = ({register, errors}) => {
+const Form = ({ register, errors }) => {
    const { data, isLoading } = useQuery({
       queryKey: ["sectors"],
       queryFn: async () => {
-         const res = await fetch("http://localhost:5000/sectors");
+         const res = await fetch("https://task-server-pearl.vercel.app/sectors");
          const data = res.json();
          return data;
       },
